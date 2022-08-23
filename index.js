@@ -53,9 +53,11 @@ function updateMovie(movie) {
                 <p class="imdb-rating">⭐ ${imdbRating}</p>
             </div>
             <div class="flex middle">
-                <p class="runtime">${Runtime}</p>
-                <p class="genre">${Genre}</p>
-                <button id="watchlist-btn" type="submit">+</button>
+              <div class="flex-col">
+                  <p class="runtime">${Runtime}</p>
+                  <p class="genre">${Genre}</p>
+              </div>
+              <button id="watchlist-btn" type="submit">+</button>
             </div>
             <div class="bottom">
                 <p class="plot">${Plot}</p>

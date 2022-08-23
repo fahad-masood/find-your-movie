@@ -95,6 +95,11 @@ header{
     display: flex;
 }
 
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
 .movie-poster{
     width: 100px;
     height: 150px;
