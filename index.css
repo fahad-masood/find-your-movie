@@ -112,6 +112,7 @@ header{
 }
 
 .right-container{
+    width: 100%;
     color: white;
 }
 
@@ -129,10 +130,11 @@ header{
     color: #121212;
     background: whitesmoke;
     border: none;
-    font-size: 0.75rem;
+    font-size: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
+    width: 2rem;
     height: 2rem;
 }
 
@@ -177,6 +179,12 @@ header{
 
     input{
         font-size: 1rem;
+    }
+
+    #watchlist-btn{
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
     }
 
 }

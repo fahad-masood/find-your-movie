@@ -45,7 +45,7 @@ function updateMovie(movie) {
   <div class="container">
     <div class="flex">
         <div class="left-container">
-            <img class="movie-poster" src=${Poster} alt="N/A">
+            <img class="movie-poster" src=${Poster} alt="N/A" onerror="this.onerror=null;this.src='./crying.jpg';">
         </div>
         <div class="right-container">
             <div class="flex top">
