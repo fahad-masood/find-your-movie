@@ -7,7 +7,8 @@
 body, html{
     padding: 0;
     margin: 0;
-    background: #121212;
+    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ), url(./background.jpeg);
+    background-size: cover;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -17,16 +18,15 @@ a{
 }
 
 header{
-    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(./header.jpg);
-    background-size: cover;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    background-position: top;
+    background: #121212;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 .header-items{
     display: flex;
     justify-content: space-around;
+    align-items:center;
     color: white;
     font-weight: 700;
 }

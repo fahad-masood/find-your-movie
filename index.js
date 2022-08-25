@@ -33,7 +33,7 @@ async function searchMovie() {
     document.getElementById(
       "movies-list"
     ).innerHTML = `  <div class="initial-text">
-      <h2>Oops! We didn't find anything. Please try another search.</h2>
+      <h2>Oops! We couldn't find anything. Please try another search.</h2>
       </div>`;
   }
 }
