@@ -2,6 +2,7 @@ const searchVal = document.getElementById("search-val");
 const searchBtn = document.getElementById("search-btn");
 let moviesID = [];
 let movies = [];
+let currentMovieID;
 
 searchBtn.addEventListener("click", searchMovie);
 searchVal.addEventListener("keypress", function (e) {
@@ -28,6 +29,7 @@ async function searchMovie() {
       );
       const data = await res.json();
       updateMovie(data);
+      watchlist(data);
     }
   } else {
     document.getElementById(
@@ -39,7 +41,7 @@ async function searchMovie() {
 }
 
 function updateMovie(movie) {
-  let { Title, Runtime, Genre, Plot, imdbRating, Poster } = movie;
+  let { Title, Runtime, Genre, Plot, imdbRating, Poster, imdbID } = movie;
   document.getElementById("movies-list").innerHTML += `
   
   <div class="container">
@@ -57,7 +59,9 @@ function updateMovie(movie) {
                   <p class="runtime">${Runtime}</p>
                   <p class="genre">${Genre}</p>
               </div>
-              <button id="watchlist-btn" type="submit">+</button>
+              <div id="${imdbID}">
+                <button class="watchlist-btn">+</button>
+              </div>
             </div>
             <div class="bottom">
                 <p class="plot">${Plot}</p>
@@ -67,4 +71,21 @@ function updateMovie(movie) {
 </div>
 
   `;
+}
+
+function watchlist(movie) {
+  const watchlistMovies = document.querySelectorAll(".watchlist-btn");
+  for (let i = 0; i < watchlistMovies.length; i++) {
+    watchlistMovies.item(i).addEventListener("click", (e) => {
+      currentMovieID = moviesID[i];
+      localStorage.setItem(
+        JSON.stringify(currentMovieID),
+        JSON.stringify(currentMovieID)
+      );
+      document.querySelector(
+        `#${currentMovieID}`
+      ).innerHTML = `<button id=${currentMovieID} class="watchlist-btn" style="display: none;"></button>
+        <p class="movie-added">✅ Added</p>`;
+    });
+  }
 }

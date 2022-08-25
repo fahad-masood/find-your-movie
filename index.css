@@ -126,14 +126,13 @@ header{
     font-size: 0.75rem;
 }
 
-#watchlist-btn{
+.watchlist-btn{
     color: #121212;
     background: whitesmoke;
     border: none;
     font-size: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
-    display: inline-block;
     width: 2rem;
     height: 2rem;
 }
@@ -148,6 +147,12 @@ header{
 .middle{
     justify-content: space-between;
     margin-bottom: 0;
+}
+
+.movie-added{
+    font-size: 0.75rem;
+    color: green;
+    font-weight: bold;
 }
 
 @media all and (min-width: 550px){
@@ -181,10 +186,14 @@ header{
         font-size: 1rem;
     }
 
-    #watchlist-btn{
+    .watchlist-btn{
         font-size: 2rem;
         width: 3rem;
         height: 3rem;
+    }
+
+    .movie-added{
+        font-size: 1.2rem;
     }
 
 }
