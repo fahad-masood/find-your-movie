@@ -2,7 +2,7 @@
 
 - This project is made using HTML, CSS and Javascript
 - OMDB API is used for fetching show details
-- The design of the UI is fully responsive for all screen sizes
+- The design of the UI is fully responsive to all screen sizes
 
 ## Features
 
